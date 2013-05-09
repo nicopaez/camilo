@@ -15,7 +15,8 @@ gem 'rake'
 
 # Component requirements
 gem 'slim'
-gem 'dm-sqlite-adapter'
+gem 'pg', :group => 'production'
+gem 'dm-postgres-adapter', :group => 'production'
 gem 'dm-validations'
 gem 'dm-timestamps'
 gem 'dm-migrations'
@@ -26,6 +27,7 @@ gem 'dm-core'
 gem 'tilt', '1.3.7'
 
 # Test requirements
+gem 'dm-sqlite-adapter', :group => 'test' 
 gem 'rspec', :group => 'test'
 gem 'capybara', :group => 'test'
 gem 'cucumber', :group => 'test'
