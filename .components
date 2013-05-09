@@ -1,0 +1,9 @@
+---
+:orm: datamapper
+:test: cucumber
+:mock: none
+:script: jquery
+:renderer: slim
+:stylesheet: none
+:namespace: Camilo
+:migration_format: number
