@@ -1,3 +1,4 @@
+@wip
 Feature: Create event
   As a speaker
   I want to create a event and get its link

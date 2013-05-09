@@ -57,5 +57,8 @@ module Camilo
     #     render 'errors/505'
     #   end
     #
+    get '/' do
+      'Coming soon.'
+    end
   end
 end
