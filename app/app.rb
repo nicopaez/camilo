@@ -58,7 +58,7 @@ module Camilo
     #   end
     #
     get '/' do
-      'Coming soon.'
+      render 'home/index'
     end
   end
 end
