@@ -1,0 +1,13 @@
+section#content {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+footer {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.centered {
+    text-align: center;
+}
