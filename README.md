@@ -4,16 +4,17 @@ Camilo
 [![Build Status](https://travis-ci.org/nicopaez/camilo.png?branch=develop)](https://travis-ci.org/nicopaez/camilo)
 [![Code Climate](https://codeclimate.com/github/nicopaez/camilo.png)](https://codeclimate.com/github/nicopaez/camilo)
 
-Esta aplicación es desarrollada en el contexto de la materia Elemento de Ingenieria de Software de la Tecnicatura en Programación Informática de la Universidad Nacional de Quilmes, Argentina.
+Esta aplicación es desarrollada en el contexto de la materia Elementos de Ingenieria de Software de la Tecnicatura en Programación Informática de la Universidad Nacional de Quilmes, Argentina.
 
-Desde el punto de vista académico la aplicación no es más que una excusa para poner el prácticas las diversas técnicas y conceptos vistos en la materia:
-
+Desde el punto de vista académico la aplicación no es más que una excusa para poner en práctica las diversas técnicas y conceptos vistos en la materia:
 * Desarrollo iterativo
 * Visual Story Mapping
 * User Stories
+* Visual management
 * Simple Design
 * Behaviour-Driven Development
 * Test-Driven Development
+* Refactoring
 * Collective ownership
 * Configuration Management
 * Continous Integration & Delivery
@@ -25,6 +26,9 @@ Desde el punto de vista funcional, la aplicación permite recolectar feedback de
 Finalmente, para el desarrollo del proyecto estamos usando las siguientes herramientas:
 * Ruby como lenguaje de programación
 * Padrino como framework de desarrollo web
+* Cucumber como herramienta de soporte a BDD
+* Rspec como herramienta de pruebas automátizadas
+* SimpleCov como herramienta de medición de cobertura
 * Git como controlador de versión, en particular usamos el servicio provisto por GitHub
 * Code Climate como generador de métricas de código
 * Trello como herramienta de gestión
