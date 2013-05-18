@@ -12,11 +12,11 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
-  <link href="stylesheets/bootstrap-responsive.min.css" rel="stylesheet">
-  <link href="stylesheets/font-awesome.min.css" rel="stylesheet">
-  <link href="stylesheets/bootswatch.css" rel="stylesheet">
-  <link href="stylesheets/camilo.css" rel="stylesheet">
+  <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+  <link href="/stylesheets/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="/stylesheets/font-awesome.min.css" rel="stylesheet">
+  <link href="/stylesheets/bootswatch.css" rel="stylesheet">
+  <link href="/stylesheets/camilo.css" rel="stylesheet">
 
 </head>
 
@@ -35,13 +35,12 @@
       <a class="brand" href="../">Camilo</a>
       <div class="nav-collapse collapse" id="main-menu">
         <ul class="nav" id="main-menu-left">
-          <!-- <li><a onclick="pageTracker._link(this.href); return false;" href="http://news.bootswatch.com">News</a></li> -->
+          <!--<li><a onclick="pageTracker._link(this.href); return false;" href="http://news.bootswatch.com">News</a></li>-->
         </ul>
         <ul class="nav pull-right" id="main-menu-right">
-          <!--
-          <li><a rel="tooltip" target="_blank" href="http://builtwithbootstrap.com/" title="Showcase of Bootstrap sites &amp; apps" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'builtwithbootstrap']);">Built With Bootstrap <i class="icon-share-alt"></i></a></li>
-          <li><a rel="tooltip" target="_blank" href="https://wrapbootstrap.com/?ref=bsw" title="Marketplace for premium Bootstrap templates" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'wrapbootstrap']);">WrapBootstrap <i class="icon-share-alt"></i></a></li>
-          -->
+
+          <li><a rel="tooltip" href="/" title="Inicio">Inicio</i></a></li>
+
         </ul>
       </div>
     </div>
@@ -50,61 +49,19 @@
 
 <div class="container">
 
-
-<!-- Masthead
-================================================== -->
-<header class="jumbotron subhead" id="overview">
-  <div class="row">
-    <div>
-      <div class="well">
-        <h1>¿Voy bien, Camilo?</h1>
-        <p class="lead"></p><br/>
-          <span class="span3">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Cienfuegos.jpg/220px-Cienfuegos.jpg">
-          </span>
-          <span class="span7">
-            <p>Camilo es una aplicación web que permite recolectar feedback de una actuación, de manera simple para el expositor y de manera cómoda para la audiencia.</p>
-            <p>Si eres orador en un evento, simplemente entra a Camilo y sigue estos 3 simples pasos:</p>
-                <ol>
-                  <li>Crea tu evento con nombre y fecha, la aplicación generará un link.</li>
-                  <li>Toma el link de tu evento y difúndelo entre los asistentes para que den feedback,</li>
-                  <li>Analiza en Camilo que tal te fué.</li>
-                </ol>
-            </span>
-        <div style="clear:both"></div>
-      </div>
-    </div>
-  </div>
- <!--
-  <div class="subnav">
-    <ul class="nav nav-pills">
-      <li><a href="#typography">Typography</a></li>
-      <li><a href="#navbar">Navbar</a></li>
-      <li><a href="#buttons">Buttons</a></li>
-      <li><a href="#forms">Forms</a></li>
-      <li><a href="#tables">Tables</a></li>
-      <li><a href="#miscellaneous">Miscellaneous</a></li>
-    </ul>
-  </div>
-  -->
-</header>
-
-<section id="content">
+  <section id="main-content">
     <%= yield %>
-</section>
+  </section>
+</div><!-- /container -->
 
-
-<br>
-
-<!-- Footer
- ================================================== -->
 <hr>
 
 <footer id="footer">
+  <div class="container">
   Basado en <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>. Alojado en <a href="http://pages.github.com/">GitHub</a>. Iconos de <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>. Web fonts de <a href="http://www.google.com/webfonts">Google</a>.</p>
+  </div>
 </footer>
 
-</div><!-- /container -->
 
 
 
@@ -115,7 +72,6 @@
 <script src="javascripts/jquery.smooth-scroll.min.js"></script>
 <script src="javascripts/bootstrap.min.js"></script>
 <script src="javascripts/bootswatch.js"></script>
-
 
 </body>
 </html>

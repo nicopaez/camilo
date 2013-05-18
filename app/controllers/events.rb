@@ -19,6 +19,19 @@ Camilo::App.controllers :events do
    @message = 'Under construction. Come back in a while'
    render 'events/index' 
   end
-  
+
+  get '/new' do
+    render 'events/new'
+  end
+
+  post 'new' do
+    event = Event.new(params)
+
+  end
+
+  get '/:event_id/view' do
+    @event = Event.find(params[:event_id])
+    render 'events/view'
+  end
 
 end

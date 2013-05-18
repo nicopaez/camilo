@@ -1,0 +1,9 @@
+
+    <form class="centered">
+        <h1>Detalles del evento</h1>
+        Nombre: <%= @event.name %>
+      Fecha: <%= @event.date %>
+      Link: <%= @event.slug %>
+        <input type="text" id="event[date]" placeholder="fecha:aaaa-mm-dd" />
+        <button type="button" class="btn big" id="newButton">Guardar</button>
+    </form>
