@@ -57,6 +57,9 @@ module Camilo
     #     render 'errors/505'
     #   end
     #
+
+    set :allow_disabled_csrf, true
+
     get '/' do
       render 'home/index'
     end

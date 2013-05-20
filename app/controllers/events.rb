@@ -24,7 +24,7 @@ Camilo::App.controllers :events do
     render 'events/new'
   end
 
-  post 'new' do
+  post '/new', :csrf_protection => false do
     event = Event.new(params)
 
   end
