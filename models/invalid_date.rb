@@ -1,0 +1,3 @@
+class InvalidDate < RangeError
+
+end
