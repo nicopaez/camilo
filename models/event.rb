@@ -15,6 +15,10 @@ class Event
     event
   end
 
+  def set_slug
+    self.slug = Event.generate_slug(self.name)
+  end
+
   def self.generate_slug(name, count = 1)
     candidate_slug = name.gsub(' ', '')
     candidate_slug = "#{candidate_slug}#{count}"

@@ -1,8 +1,15 @@
 <div class="well">
-<form class="centered" method="post">
-        <h1>Detalles del evento</h1>
-        <input type="text" id="event[name]" placeholder="nombre del evento" class="large" />
-        <input type="text" id="event[date]" placeholder="fecha:aaaa-mm-dd" />
-        <input type="submit" class="btn big" id="saveButton" value="Guardar" />
-    </form>
+  <form class="centered" method="post" action='/events/create'>
+    <%= csrf_token_field %>
+    <h1>Detalles del evento</h1>
+    <input type="text" id="event[name]" name="event[name]" placeholder="nombre del evento" class="large" />
+    <input type="text" id="event[date]" name="event[date]" placeholder="fecha:aaaa-mm-dd" />
+    <input type="submit" class="btn big" id="saveButton" value="Guardar" />
+    <% if flash[:error] %>
+        <div class="alert alert-error">
+          <%=flash[:error]   %>
+        </div>
+    <% end %>
+
+  </form>
 </div>

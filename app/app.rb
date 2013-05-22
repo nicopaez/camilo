@@ -58,7 +58,7 @@ module Camilo
     #   end
     #
 
-    set :allow_disabled_csrf, true
+    #set :allow_disabled_csrf, true
 
     get '/' do
       render 'home/index'
