@@ -4,4 +4,10 @@ Camilo::App.helpers do
   # def simple_helper_method
   #  ...
   # end
+
+  def render_date(date)
+    date.to_date if date.is_a?(Date)
+    return ''
+  end
+
 end

@@ -19,11 +19,10 @@ Camilo::App.controllers :events do
 
   post :create do
     @event = Event.new(params[:event])
-    @event.set_slug
     if @event.save
       redirect(url(:events, :show, :id => @event.id))
     else
-      flash.now[:error] = "Ambos campos son requeridos"
+      flash.now[:error] = "Error: ambos campos son requeridos"
       render 'events/new'
     end
   end

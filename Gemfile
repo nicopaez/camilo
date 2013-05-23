@@ -15,6 +15,7 @@ gem 'rake'
 
 # Component requirements
 gem 'slim'
+gem 'haml'
 gem 'pg', :group => 'production'
 gem 'dm-postgres-adapter', :group => 'production'
 gem 'dm-validations'
@@ -32,6 +33,7 @@ gem 'rspec', :group => 'test'
 gem 'capybara', :group => 'test'
 gem 'cucumber', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
+#gem 'debugger'
 
 # Padrino Stable Gem
 gem 'padrino', '0.11.1'
