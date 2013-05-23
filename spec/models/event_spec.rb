@@ -6,6 +6,7 @@ describe Event do
   describe 'set_slug' do
 
     it 'should assign downcase slug' do
+      Event.should_receive(:all).with(:slug => 'myevent1').and_return([])
       event1 = Event.new
       event1.name ='my Event'
       event1.date = Date.today
