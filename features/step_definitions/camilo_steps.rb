@@ -16,3 +16,10 @@ end
 When /^I fill in "([^"]*)" with yesterday$/ do |field|
   fill_in(field, :with => Date.today-1)
 end
+
+Given(/^I am logged in$/) do
+  visit "/login"
+  fill_in("name", :with => "cucumber_user")
+  fill_in("email", :with => "cucumber_user@someplace.com")
+  click_button "submit"
+end

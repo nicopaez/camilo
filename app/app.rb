@@ -67,7 +67,6 @@ module Camilo
       end
       set :login_page, "/login"    
     end
-
     
     #provider :twitter,  'consumer_key', 'consumer_secret'
     
