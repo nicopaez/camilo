@@ -12,6 +12,8 @@ gem 'thin' # or mongrel
 
 # Project requirements
 gem 'rake'
+gem 'omniauth'
+gem 'omniauth-twitter'
 
 # Component requirements
 gem 'slim'
@@ -26,6 +28,7 @@ gem 'dm-constraints'
 gem 'dm-aggregates'
 gem 'dm-types'
 gem 'dm-core'
+gem 'dm-ar-finders'
 gem 'tilt', '1.3.7'
 
 # Test requirements
