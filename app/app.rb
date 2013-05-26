@@ -61,7 +61,7 @@ module Camilo
 
     #set :allow_disabled_csrf, true
 
-    configure :development do
+    configure :development, :travis do
       use OmniAuth::Builder do
         provider :developer
       end
