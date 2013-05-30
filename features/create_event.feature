@@ -5,6 +5,7 @@ Feature: Create event
 
   Background:
     Given there are not events
+    And I am logged in
 
   Scenario: Happy path
     Given I am on "the new event page"
