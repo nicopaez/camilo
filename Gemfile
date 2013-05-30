@@ -37,7 +37,7 @@ gem 'rspec', :group => 'test'
 gem 'capybara', :group => 'test'
 gem 'cucumber', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
-#gem 'debugger'
+gem 'debugger'
 
 # Padrino Stable Gem
 gem 'padrino', '0.11.1'

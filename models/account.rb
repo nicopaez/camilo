@@ -8,12 +8,15 @@ class Account
   property :uid, String
   property :provider, String
 
+  def friendly_name
+    name.nil? ? uid : name
+  end
+
   def self.create_with_omniauth(auth)
     account = Account.new
     account.provider = auth["provider"]
     account.uid      = auth["uid"]
-    account.name     = auth["user_info"]["name"] if auth["user_info"] # we get this only from FB
-    account.email    = auth["user_info"]["email"] if auth["user_info"] # we get this only from FB
+    account.name = auth["info"]["nickname"] # warn: this is for twitter
     account.save
     account
   end
