@@ -7,7 +7,7 @@ PadrinoTasks.use(:datamapper)
 PadrinoTasks.init
 
 puts "PADRINO_ENV: #{PADRINO_ENV}"
-if PADRINO_ENV != ('production' || 'staging')
+if ['development', 'test', 'travis'].include?(PADRINO_ENV)
 	require 'cucumber/rake/task'
 	Cucumber::Rake::Task.new(:cucumber) do |task|
   	Rake::Task['db:migrate'].invoke
