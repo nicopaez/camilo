@@ -16,5 +16,6 @@ case Padrino.env
   when :development then DataMapper.setup(:default, "sqlite3://" + Padrino.root('db', "camilo_development.db"))
   when :test        then DataMapper.setup(:default, "sqlite3://" + Padrino.root('db', "camilo_test.db"))
   when :travis      then DataMapper.setup(:default, "mysql://root@localhost/camilo_test")
+ 	when :staging 		then DataMapper.setup(:default, ENV['DATABASE_URL'])
   when :production  then DataMapper.setup(:default, ENV['DATABASE_URL'])
 end
