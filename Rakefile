@@ -6,6 +6,7 @@ PadrinoTasks.use(:database)
 PadrinoTasks.use(:datamapper)
 PadrinoTasks.init
 
+puts "PADRINO_ENV: #{PADRINO_ENV}"
 if PADRINO_ENV != ('production' || 'staging')
 	require 'cucumber/rake/task'
 	Cucumber::Rake::Task.new(:cucumber) do |task|
