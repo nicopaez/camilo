@@ -6,5 +6,5 @@ require 'rspec/expectations'
 ##
 # You can handle all padrino applications using instead:
 #   Padrino.application
-Capybara.default_driver = :selenium
+Capybara.default_driver = :selenium unless PADRINO_ENV=='travis'
 Capybara.app = Camilo::App.tap { |app|  }
