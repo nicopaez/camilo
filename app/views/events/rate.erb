@@ -1,0 +1,21 @@
+<div class="well">
+  <form class="centered" id="ratingForm" method="post">
+    <%= csrf_token_field %>
+    <h1>Evaluación de evento</h1>
+    <p>Nombre: <%= @event.name %></p>
+    <p>Fecha: <%= @event.date.to_date.to_s %></p>
+ 	<input type="text" id="comment" name="comment" class="large" placeholder="comentario"/><br/>
+    <a href="#" class="btn" id="happyButton"><img src="/images/happy.png"/></a>
+    <a href="#" class="btn" id="silentButton"><img src="/images/silent.png"/></a>
+    <a href="#" class="btn" id="sadButton"><img src="/images/sad.png"/></a>
+    <input type="hidden" id="value" name="value" />
+
+  </form>
+</div>
+
+<% content_for :additional_js do %>
+    <%= javascript_include_tag 'rate.js' %>
+<% end %>
+
+
+    

@@ -7,7 +7,6 @@ Camilo::App.controllers :events do
   end
 
   get :new do
-    @title = 'Nuevo evento'
     @event = Event.new
     render 'events/new'
   end
@@ -25,6 +24,26 @@ Camilo::App.controllers :events do
       flash.now[:error] = "Error: ambos campos son requeridos"
       render 'events/new'
     end
+  end
+
+  get '/rate/:event_id' do
+    @event = Event.find_by_slug(params[:event_id])
+    if(@event.nil?)
+      @message = "El evento buscado no existe."
+      render 'events/message'
+    else
+      render 'events/rate'
+    end
+  end
+
+  post '/rate/:event_id' do
+    @event = Event.find_by_slug(params[:event_id])
+    rating = Rating.for_event(@event)
+    rating.value = params[:value]
+    rating.comment = params[:comment] 
+    rating.save
+    @message = "Gracias por su evaluacion"
+    render 'events/message'
   end
 
   get :edit, :with => :id do
@@ -73,19 +92,4 @@ Camilo::App.controllers :events do
     end
   end
 
-  delete :destroy_many do
-    @title = "Events"
-    unless params[:event_ids]
-      flash[:error] = t(:destroy_many_error, :model => 'event')
-      redirect(url(:events, :index))
-    end
-    ids = params[:event_ids].split(',').map(&:strip).map(&:to_i)
-    events = Event.all(:id => ids)
-    
-    if events.destroy
-    
-      flash[:success] = t(:destroy_many_success, :model => 'Events', :ids => "#{ids.to_sentence}")
-    end
-    redirect url(:events, :index)
-  end
 end

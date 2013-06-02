@@ -16,7 +16,7 @@ Feature: Create event
 
   Scenario: Event id already exists
     Given I am on "the new event page"
-    And event with named "My first event" already exists
+    And event named "My first event" already exists
     And I fill in "event[name]" with "My first event"
     And I fill in "event[date]" with tomorrow
     When I press "saveButton"

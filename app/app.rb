@@ -78,6 +78,7 @@ module Camilo
     
     access_control.roles_for :any do |role|
         role.protect "/events"
+        role.allow "/events/rate"
     end
 
     get '/' do
