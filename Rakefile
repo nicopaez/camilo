@@ -11,7 +11,7 @@ if ['development', 'test', 'travis'].include?(PADRINO_ENV)
 	require 'cucumber/rake/task'
 
 	task :travis do
-  ["rake spec, rake cucumber"].each do |cmd|
+  ["rake spec", "rake cucumber"].each do |cmd|
     puts "Starting to run #{cmd}..."
     system("export DISPLAY=:99.0 && bundle exec #{cmd}")
     raise "#{cmd} failed!" unless $?.exitstatus == 0
@@ -23,5 +23,5 @@ if ['development', 'test', 'travis'].include?(PADRINO_ENV)
   	task.cucumber_opts = ["features"]
 	end
 
-	task :default => [:cucumber, :spec]
+	task :default => [:travis]
 end
