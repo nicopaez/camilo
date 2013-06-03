@@ -29,3 +29,7 @@ Given /^I am logged in$/ do
   click_button "submit"
 end
 
+When(/^I wait a while$/) do
+  sleep(2)
+end
+

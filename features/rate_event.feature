@@ -10,4 +10,5 @@ Feature: Rate event
     Given I want to rate "the first event"
     And I fill in "comment" with "Great!"
     When I follow "happyButton"
+    And I wait a while    
     Then I should see "Gracias"
