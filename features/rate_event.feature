@@ -1,3 +1,4 @@
+@wip
 Feature: Rate event
   As an attendee
   I want to rate an event
