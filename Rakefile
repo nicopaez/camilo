@@ -12,6 +12,7 @@ if ['development', 'test', 'travis'].include?(PADRINO_ENV)
 
 	task :travis do
   ["rake spec", "rake cucumber"].each do |cmd|
+    Rake::Task['db:migrate'].invoke
     puts "Starting to run #{cmd}..."
     system("export DISPLAY=:99.0 && bundle exec #{cmd}")
     raise "#{cmd} failed!" unless $?.exitstatus == 0
@@ -20,7 +21,6 @@ if ['development', 'test', 'travis'].include?(PADRINO_ENV)
 
 	Cucumber::Rake::Task.new(:cucumber) do |task|
   	Rake::Task['db:migrate'].invoke
-    #DataMapper.auto_migrate!
   	task.cucumber_opts = ["features"]
 	end
 
