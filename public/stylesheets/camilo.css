@@ -35,6 +35,15 @@ form h1 {
     padding-bottom: 10px;
 }
 
+form p {
+    font-size: x-large;
+    padding-bottom: 10px;
+}
+
+table {
+    font-size: large;
+}
+
 .container {
     width: 950px;
 }

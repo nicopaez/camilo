@@ -20,6 +20,7 @@ if ['development', 'test', 'travis'].include?(PADRINO_ENV)
 
 	Cucumber::Rake::Task.new(:cucumber) do |task|
   	Rake::Task['db:migrate'].invoke
+    #DataMapper.auto_migrate!
   	task.cucumber_opts = ["features"]
 	end
 

@@ -10,7 +10,8 @@ Given(/^event named "(.*?)" already exists$/) do |event_name|
 end
 
 Given /^there are not events$/ do
-  Event.destroy
+  Rating.all.destroy
+  Event.all.destroy
 end
 
 Given /^I want to rate "([^"]*)"$/ do | event_name |

@@ -57,6 +57,11 @@ Camilo::App.controllers :events do
     end
   end
 
+  get '/:event_slug/ratings' do
+    @event = Event.find_by_slug(params[:event_slug])    
+    render 'events/ratings'
+  end
+
   put :update, :with => :id do
     @title = t(:update_title, :model => "event #{params[:id]}")
     @event = Event.get(params[:id].to_i)

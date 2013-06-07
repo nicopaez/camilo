@@ -61,7 +61,7 @@ module Camilo
 
     #set :allow_disabled_csrf, true
 
-    configure :development, :travis do
+    configure :development, :test, :travis do
       use OmniAuth::Builder do
         provider :developer
       end
@@ -87,6 +87,12 @@ module Camilo
 
     get :login do
       render '/home/login'
+    end
+
+
+    get '/logout' do
+      set_current_account(nil)
+      render 'home/index'      
     end
 
     get :auth, :map => '/auth/:provider/callback' do

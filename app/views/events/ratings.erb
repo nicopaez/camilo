@@ -1,0 +1,31 @@
+<div class="well">
+  <form class="centered">
+    <h1>Evaluación de evento</h1>
+    <p>Nombre: <%= @event.name %></p>
+    <p>Fecha: <%= @event.date.to_date.to_s %></p>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Positivo</th>
+                <th>Neutro</th>
+                <th>Negativo</th>
+            </tr>
+        </thead>    
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+  </form>
+</div>
+
+<% content_for :additional_js do %>
+    <%= javascript_include_tag 'rate.js' %>
+<% end %>
+
+
+    

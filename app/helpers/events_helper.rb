@@ -10,4 +10,8 @@ Camilo::App.helpers do
     return ''
   end
 
+  def server_url
+  	ENV['APP_URL']
+  end
+  
 end

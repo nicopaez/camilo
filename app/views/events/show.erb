@@ -3,6 +3,6 @@
     <h1>Detalles del evento</h1>
     <p>Nombre: <%= @event.name %></p>
     <p>Fecha: <%= @event.date.to_date.to_s %></p>
-    <p>Link: <%= @event.slug %></p>
+    <p>Página de evaluación: <a href='<%= "#{server_url}events/rate/#{@event.slug}" %>'><%= "#{server_url}events/rate/#{@event.slug}" %></a></p>
   </form>
 </div>

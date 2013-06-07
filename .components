@@ -3,7 +3,7 @@
 :test: cucumber
 :mock: none
 :script: jquery
-:renderer: slim
+:renderer: erb
 :stylesheet: none
-:namespace: Camilo
+:namespace: Alfred
 :migration_format: number
