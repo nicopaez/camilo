@@ -5,6 +5,7 @@ migration 1, :create_events do
       column :name, String, :length => 255
       column :date, Date
       column :slug, String, :length => 255
+      column :account_id, Integer
     end
   end
 

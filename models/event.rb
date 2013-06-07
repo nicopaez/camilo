@@ -5,6 +5,7 @@ class Event
   property :name, String, :required => true
   property :date, DateTime, :required => true
   property :slug, String
+  belongs_to :account
   has n, :ratings
   before :save, :set_slug
 

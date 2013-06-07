@@ -47,3 +47,8 @@ table {
 .container {
     width: 950px;
 }
+
+
+td.table-footer {
+  text-align: right;  
+}

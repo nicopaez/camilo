@@ -18,6 +18,7 @@ Camilo::App.controllers :events do
 
   post :create do
     @event = Event.new(params[:event])
+    @event.account = current_account
     if @event.save
       redirect(url(:events, :show, :id => @event.id))
     else

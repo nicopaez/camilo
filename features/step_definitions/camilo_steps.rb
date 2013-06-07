@@ -6,6 +6,7 @@ Given(/^event named "(.*?)" already exists$/) do |event_name|
   e = Event.new
   e.name = event_name
   e.date = Date.today + 1
+  e.account = Account.first
   e.save
 end
 
@@ -34,3 +35,17 @@ When(/^I wait a while$/) do
   sleep(2)
 end
 
+Given(/^the event named "(.*?)" and rated with (\d+)$/) do |event_name, rate|
+  e = Event.new
+  e.name = event_name
+  e.date = Date.today + 1
+  e.account = Account.first
+  e.save
+  r = Rating.for_event(e)
+  r.value = rate
+  r.save
+end
+
+Given(/^I am browsing the ratings page for event with slug "(.*?)"$/) do |event_slug|
+  visit "/events/#{event_slug}/ratings"
+end
