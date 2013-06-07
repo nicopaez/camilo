@@ -1,8 +1,7 @@
 Camilo::App.controllers :events do
 
   get :index do
-    @title = "Events"
-    @events = Event.all
+    @events = Event.all(:account => current_account)
     render 'events/index'
   end
 
@@ -59,8 +58,12 @@ Camilo::App.controllers :events do
   end
 
   get '/:event_slug/ratings' do
-    @event = Event.find_by_slug(params[:event_slug])    
-    render 'events/ratings'
+    @event = Event.find_by_slug(params[:event_slug])   
+    if(@event.account == current_account) 
+      render 'events/ratings'
+    else
+      return 403
+    end
   end
 
   put :update, :with => :id do

@@ -1,1 +1,33 @@
-<h1> <%= @message%> </h1>
+<div class="well">
+  <form class="centered">
+    <h1>Mis eventos</h1>
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th class="centered-column">Fecha</th>
+                <th class="centered-column">Acciones</th>
+            </tr>
+        </thead>    
+        <tbody>
+            <% @events.each do |e| %>
+            <tr>
+                <td><%= e.name %></td>
+                <td class="centered-column"><%= e.date.to_date.to_s %></td>
+                <td class="centered-column">
+                    <a href="/events/<%= e.slug %>/ratings" rel="tooltip" title="evaluación" ><i class="icon-tasks"></i></a>
+                    <a href="javascript:alert('<%= generate_event_link(e.slug)%>')" rel="tooltip" title="copiar link"><i class="icon-link"></i></a>
+                </td>
+            </tr>
+            <% end %>
+            <tr>
+                <td class="table-footer" colspan="3">Total de eventos: <%= @events.size %></td>
+            </tr>
+        </tbody>
+    </table>
+  </form>
+</div>
+
+<% content_for :additional_js do %>
+    <%= javascript_include_tag 'events.js' %>
+<% end %>

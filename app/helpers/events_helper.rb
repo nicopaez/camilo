@@ -14,4 +14,8 @@ Camilo::App.helpers do
   	ENV['APP_URL']
   end
   
+  def generate_event_link(event_slug)
+    "#{server_url}events/rate/#{event_slug}"
+  end
+  
 end

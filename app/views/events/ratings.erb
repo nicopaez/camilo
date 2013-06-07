@@ -14,9 +14,9 @@
         </thead>    
         <tbody>
             <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
+                <td><%= @event.positive_ratings_count%></td>
+                <td><%= @event.neutral_ratings_count%></td>
+                <td><%= @event.negative_ratings_count%></td>
             </tr>
             <tr>
                 <td class="table-footer" colspan="3">Total de evaluaciones: <%= @event.ratings.size %></td>
