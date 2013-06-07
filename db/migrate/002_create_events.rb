@@ -1,4 +1,4 @@
-migration 1, :create_events do
+migration 2, :create_events do
   up do
     create_table :events do
       column :id, Integer, :serial => true

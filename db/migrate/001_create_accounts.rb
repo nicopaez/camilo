@@ -1,4 +1,4 @@
-migration 2, :create_accounts do
+migration 1, :create_accounts do
   up do
     create_table :accounts do
       column :id, Integer, :serial => true
