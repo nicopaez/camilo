@@ -29,15 +29,13 @@ class Event
   end
 
   def set_slug
-    self.slug = Event.generate_slug(self.name) if self.new?
+    self.slug = Event.generate_slug(@name) if self.new?
   end
-
+  
   def self.generate_slug(name, initial_count = 1)
-    puts "initial count #{count}"
     candidate_slug = name.gsub(' ', '')
     candidate_slug = "#{candidate_slug}#{initial_count}".downcase
     count = Event.all(:slug => candidate_slug).size
-    puts "found count #{count}"
     if count == 0
       return candidate_slug 
     else
