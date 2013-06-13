@@ -13,7 +13,7 @@ gem 'thin' # or mongrel
 # Project requirements
 gem 'rake'
 gem 'omniauth'
-gem 'omniauth-twitter'
+gem 'omniauth-twitter', :github => 'arunagw/omniauth-twitter'
 
 # Component requirements
 gem 'slim'
