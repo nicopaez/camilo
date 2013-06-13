@@ -37,6 +37,7 @@ gem 'rspec', :group => 'test'
 gem 'capybara', :group => 'test'
 gem 'selenium-webdriver', :group => 'test'
 gem 'cucumber', :group => 'test'
+gem 'simplecov', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
 gem 'debugger'
 
