@@ -10,4 +10,4 @@ Feature: See ratings
   Scenario: Happy path
     Given I am browsing the ratings page for event with slug "thefirstevent1"
     And I wait a while
-    Then I should see "Total de evaluaciones: 1"
+    

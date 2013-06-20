@@ -44,6 +44,7 @@
 
           <li><a rel="tooltip" href="/" title="Inicio">Inicio</a></li>
           <% if current_account %>
+            <li><a rel="tooltip" href="/events/my" title="Profile">Mis eventos</a></li>
             <li><a rel="tooltip" href="/" title="Profile"><%= current_account.friendly_name %></a></li>
             <li><a rel="tooltip" href="/logout" title="Cerrar sesión">Cerrar sesión</a></li>
           <% else %>

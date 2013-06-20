@@ -10,6 +10,11 @@ Camilo::App.controllers :events do
     render 'events/new'
   end
 
+  get '/my' do
+    @events = Event.all(:account => current_account)
+    render 'events/index'
+  end
+
   get :show do
     @event = Event.get(params[:id].to_i)
     render 'events/show'
