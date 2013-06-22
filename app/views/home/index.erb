@@ -1,3 +1,11 @@
 <div class="alert centered">
 Gracias por tu visita. Camilo está aún en construcción, mencionanos en un tweet (<a href="https://twitter.com/voybiencamilo">@voybiencamilo</a>) y te contactaremos en cuanto esté Camilo listo.
 </div>
+
+<% content_for :additional_js do %>
+
+	<% if (PADRINO_ENV == 'production') %>
+		<%= javascript_include_tag 'google_analytics.js'%>
+	<% end %>
+
+<% end %>
