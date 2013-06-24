@@ -16,6 +16,7 @@ gem 'omniauth'
 gem 'omniauth-twitter', :github => 'arunagw/omniauth-twitter'
 
 # Component requirements
+gem 'googl'
 gem 'slim'
 gem 'haml'
 gem 'pg', :group => 'production'
