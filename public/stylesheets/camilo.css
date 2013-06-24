@@ -1,6 +1,8 @@
-section#content {
+section#main-content {
     margin-top: 0px;
     padding-top: 0px;
+    min-height: 300px;
+
 }
 
 footer {
@@ -10,4 +12,55 @@ footer {
 
 .centered {
     text-align: center;
+}
+
+td.centered-column {
+    text-align: center;
+}
+
+th.centered-column {
+    text-align: center;
+}
+
+[class^="icon-"],[class*=" icon-"] {
+    text-decoration: none;
+}
+
+input[type="text"] {
+    height: 35px;
+    font-size: 22px;
+}
+
+.large{
+    width: 400px;
+}
+
+.big {
+    height: 45px;
+    min-width: 100px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+form h1 {
+    font-size: xx-large;
+    padding-bottom: 10px;
+}
+
+form p {
+    font-size: x-large;
+    padding-bottom: 10px;
+}
+
+table {
+    font-size: large;
+}
+
+.container {
+    width: 950px;
+}
+
+
+td.table-footer {
+  text-align: right;  
 }

@@ -60,5 +60,10 @@ module Camilo
     get '/' do
       render 'home/index'
     end
+
+    get '/about' do
+      render 'home/about'
+    end
+
   end
 end
