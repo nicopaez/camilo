@@ -5,6 +5,7 @@ class Event
   property :name, String, :required => true
   property :date, DateTime, :required => true
   property :slug, String
+  property :short_url, String
   belongs_to :account
   has n, :ratings
   before :save, :set_slug
@@ -32,6 +33,11 @@ class Event
     self.slug = Event.generate_slug(@name) if self.new?
   end
   
+  def slug
+    set_slug if @slug.nil?
+    @slug
+  end
+
   def self.generate_slug(name, initial_count = 1)
     candidate_slug = name.gsub(' ', '')
     candidate_slug = "#{candidate_slug}#{initial_count}".downcase

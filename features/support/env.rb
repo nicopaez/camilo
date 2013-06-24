@@ -11,6 +11,7 @@ SimpleCov.start do
   add_filter '/features/'
 end
 
+ENV['base_url'] = "http://localhost"
 ##
 # You can handle all padrino applications using instead:
 #   Padrino.application
