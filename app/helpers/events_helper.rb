@@ -6,7 +6,7 @@ Camilo::App.helpers do
   # end
 
   def render_date(date)
-    date.to_date if date.is_a?(Date)
+    return date.to_date if date.is_a?(Date)
     return ''
   end
 

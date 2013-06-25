@@ -9,16 +9,24 @@
             <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Cienfuegos.jpg/220px-Cienfuegos.jpg">
           </span>
           <span class="span6">
-            <p>Camilo es una aplicación web que permite recolectar feedback de una actuación, de manera simple para el expositor y de manera cómoda para la audiencia.</p>
+<br>
+
+             <p>Camilo es una aplicación web que permite recolectar feedback de una actuación, de manera simple para el expositor y de manera cómoda para la audiencia.</p>
             <p>Si eres orador en un evento, simplemente entra a Camilo y sigue estos 3 simples pasos:</p>
                 <ol>
-                  <li>Crea tu evento con nombre y fecha, la aplicación generará un link.</li>
-                  <li>Toma el link de tu evento y difúndelo entre los asistentes para que den feedback,</li>
+                  <li>Crea tu evento con sólo indicar nombre y fecha, Camilo generará un link.</li>
+                  <li>Toma el link de tu evento y difúndelo entre los asistentes para que den feedback.</li>
                   <li>Analiza en Camilo que tal te fué.</li>
                 </ol>
-            <div class="centered">
-                <a href="/events/new"><button class="btn big"> Crear evento</button></a>
+<br/>
+  <p>
+Prúebalo.</p>
+            <div class="push-right">
+                <a href="/events/new"><button class="btn btn-primary big"> Crear evento</button></a>
             </div>
+
+<br/>
+     
             </span>
         <div style="clear:both"></div>
       </div>
@@ -39,7 +47,11 @@
 
 <br>
 
-<div class="alert centered">
-Gracias por tu visita. Camilo está aún en construcción, <a href="mailto:camilo@nicopaez.com.ar">escríbenos</a> y te contactaremos en cuanto esté Camilo listo.
-</div>
 
+<% content_for :additional_js do %>
+
+	<% if (PADRINO_ENV == 'production') %>
+		<%= javascript_include_tag 'google_analytics.js'%>
+	<% end %>
+
+<% end %>

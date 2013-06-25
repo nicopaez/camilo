@@ -36,13 +36,12 @@
       <a class="brand" href="../">Camilo</a>
       <div class="nav-collapse collapse" id="main-menu">
         <ul class="nav" id="main-menu-left">
+          <li><a href="/about">Acerca de Camilo</a></li>
           <!--<li><a onclick="pageTracker._link(this.href); return false;" href="http://news.bootswatch.com">News</a></li>-->
         </ul>
 
         <ul class="nav pull-right" id="main-menu-right">
 
-
-          <li><a rel="tooltip" href="/" title="Inicio">Inicio</a></li>
           <% if current_account %>
             <li><a rel="tooltip" href="/events/my" title="Profile">Mis eventos</a></li>
             <li><a rel="tooltip" href="/" title="Profile"><%= current_account.friendly_name %></a></li>
@@ -50,7 +49,6 @@
           <% else %>
             <li><a rel="tooltip" href="/login" title="Iniciar sesión">Iniciar sesión</a></li>
           <% end %>
-
         </ul>
       </div>
     </div>
@@ -86,4 +84,3 @@
  <%= yield_content :additional_js %>
 </body>
 </html>
-

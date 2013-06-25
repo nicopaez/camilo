@@ -5,6 +5,10 @@ section#main-content {
 
 }
 
+i {
+    padding-left: 5px;
+    padding-right: 5px;
+}
 footer {
     margin-bottom: 20px;
     text-align: right;
@@ -12,6 +16,14 @@ footer {
 
 .centered {
     text-align: center;
+}
+
+.push-left {
+    text-align: left;
+}
+
+.push-right {
+    text-align: right;
 }
 
 td.centered-column {

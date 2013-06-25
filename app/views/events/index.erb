@@ -1,6 +1,11 @@
 <div class="well">
-  <form class="centered">
     <h1>Mis eventos</h1>
+    
+    <div class="push-right">
+        <a href="new"><button class="btn btn-primary">Crear evento</button></a>
+    </div>
+
+    <br>
     <table class="table table-bordered table-striped table-hover">
         <thead>
             <tr>
@@ -16,7 +21,7 @@
                 <td class="centered-column"><%= e.date.to_date.to_s %></td>
                 <td class="centered-column">
                     <a href="/events/<%= e.slug %>/ratings" rel="tooltip" title="evaluación" ><i class="icon-tasks"></i></a>
-                    <a href="javascript:alert('<%= generate_event_link(e.slug)%>')" rel="tooltip" title="copiar link"><i class="icon-link"></i></a>
+                    <a href="/events/<%= e.slug %>/edit" rel="tooltip" title="editar" ><i class="icon-edit"></i></a><a href="javascript:alert('<%= generate_event_link(e.slug)%>')" rel="tooltip" title="copiar link"><i class="icon-link"></i></a>
                 </td>
             </tr>
             <% end %>
@@ -25,9 +30,5 @@
             </tr>
         </tbody>
     </table>
-  </form>
-</div>
 
-<% content_for :additional_js do %>
-    <%= javascript_include_tag 'events.js' %>
-<% end %>
+</div>

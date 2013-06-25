@@ -33,6 +33,16 @@ Camilo::App.controllers :events do
     end
   end
 
+  get '/:event_id/edit' do
+    @event = Event.find_by_slug(params[:event_id])
+    if(@event.nil?)
+      @message = "El evento buscado no existe."
+      render 'events/message'
+    else
+      render 'events/edit'
+    end
+  end
+
   get '/rate/:event_id' do
     @event = Event.find_by_slug(params[:event_id])
     if(@event.nil?)

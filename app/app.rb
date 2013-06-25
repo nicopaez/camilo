@@ -103,5 +103,10 @@ module Camilo
         redirect "/events/new"
     end
 
+    get '/about' do
+      render 'home/about'
+    end
+
   end
+  
 end
