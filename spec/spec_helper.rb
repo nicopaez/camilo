@@ -3,10 +3,7 @@ PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
 
 require 'simplecov'
 
-SimpleCov.start do
-  root(File.join(File.dirname(__FILE__), '../'))
-  add_filter '/spec/'
-end
+SimpleCov.start
 
 require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
 

@@ -5,13 +5,9 @@ require 'capybara/cucumber'
 require 'rspec/expectations'
 require 'simplecov'
 
-SimpleCov.start do
-  root(File.join(File.dirname(__FILE__), '../../'))
-  add_filter '/spec/'
-  add_filter '/features/'
-end
+SimpleCov.start
 
-ENV['base_url'] = "http://localhost"
+ENV['HOST_URL'] = "http://localhost"
 ##
 # You can handle all padrino applications using instead:
 #   Padrino.application
