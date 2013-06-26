@@ -35,6 +35,7 @@ gem 'tilt', '1.3.7'
 # Test requirements
 gem 'dm-sqlite-adapter', :group => 'test' 
 gem 'rspec', :group => 'test'
+gem 'rspec_junit_formatter', :group => 'test'
 gem 'capybara', :group => 'test'
 gem 'selenium-webdriver', :group => 'test'
 gem 'cucumber', :group => 'test'
