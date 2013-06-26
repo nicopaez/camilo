@@ -25,7 +25,7 @@ describe UrlShortener do
   describe 'for_default_url' do
 
     it 'should take url from ENV' do
-    	ENV['base_url'] = 'http://localhost'
+    	ENV['HOST_URL'] = 'http://localhost'
       shortener = UrlShortener.for_default_url
       shortener.base_url.should eq 'http://localhost'
     end

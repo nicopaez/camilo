@@ -24,7 +24,7 @@ Camilo::App.controllers :events do
     @event = Event.new(params[:event])
     @event.account = current_account
     if @event.save
-      @event.short_url = UrlShortener.for_default_url.shorten(@event.slug)
+      @event.short_url = UrlShortener.for_default_url.shorten("events/rate/#{@event.slug}").short_url
       @event.save
       redirect(url(:events, :show, :id => @event.id))
     else
@@ -33,8 +33,8 @@ Camilo::App.controllers :events do
     end
   end
 
-  get '/:event_id/edit' do
-    @event = Event.find_by_slug(params[:event_id])
+  get '/:event_slug/edit' do
+    @event = Event.find_by_slug(params[:event_slug])
     if(@event.nil?)
       @message = "El evento buscado no existe."
       render 'events/message'
@@ -43,8 +43,8 @@ Camilo::App.controllers :events do
     end
   end
 
-  get '/rate/:event_id' do
-    @event = Event.find_by_slug(params[:event_id])
+  get '/rate/:event_slug' do
+    @event = Event.find_by_slug(params[:event_slug])
     if(@event.nil?)
       @message = "El evento buscado no existe."
       render 'events/message'
@@ -63,17 +63,6 @@ Camilo::App.controllers :events do
     render 'events/message'
   end
 
-  get :edit, :with => :id do
-    @title = t(:edit_title, :model => "event #{params[:id]}")
-    @event = Event.get(params[:id].to_i)
-    if @event
-      render 'events/edit'
-    else
-      flash[:warning] = t(:create_error, :model => 'event', :id => "#{params[:id]}")
-      halt 404
-    end
-  end
-
   get '/:event_slug/ratings' do
     @event = Event.find_by_slug(params[:event_slug])   
     if(@event.account == current_account) 
@@ -83,17 +72,14 @@ Camilo::App.controllers :events do
     end
   end
 
-  put :update, :with => :id do
-    @title = t(:update_title, :model => "event #{params[:id]}")
-    @event = Event.get(params[:id].to_i)
-    if @event
+  post '/:event_id/update' do
+    @event = Event.get(params[:event_id].to_i)
+    if @event && (@event.account == current_account)
       if @event.update(params[:event])
         flash[:success] = t(:update_success, :model => 'Event', :id =>  "#{params[:id]}")
-        params[:save_and_continue] ?
-          redirect(url(:events, :index)) :
-          redirect(url(:events, :edit, :id => @event.id))
+        redirect(url(:events, :show, :id => @event.id))
       else
-        flash.now[:error] = t(:update_error, :model => 'event')
+        flash.now[:error] = "Error: ambos campos son requeridos y la fecha debe ser posterior a hoy"
         render 'events/edit'
       end
     else

@@ -15,7 +15,7 @@ class UrlShortener
 	end
 
 	def self.for_default_url
-		for_base_url ENV['base_url']
+		for_base_url ENV['HOST_URL']
 	end
 
 end

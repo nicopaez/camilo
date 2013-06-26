@@ -10,8 +10,8 @@ Camilo::App.helpers do
     return ''
   end
 
-  def server_url
-  	ENV['APP_URL']
+  def host_url
+  	ENV['HOST_URL']
   end
   
   def generate_event_link(event_slug)
