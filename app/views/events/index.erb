@@ -1,1 +1,34 @@
-<h1> <%= @message%> </h1>
+<div class="well">
+    <h1>Mis eventos</h1>
+    
+    <div class="push-right">
+        <a href="new"><button class="btn btn-primary">Crear evento</button></a>
+    </div>
+
+    <br>
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th class="centered-column">Fecha</th>
+                <th class="centered-column">Acciones</th>
+            </tr>
+        </thead>    
+        <tbody>
+            <% @events.each do |e| %>
+            <tr>
+                <td><%= e.name %></td>
+                <td class="centered-column"><%= e.date.to_date.to_s %></td>
+                <td class="centered-column">
+                    <a href="/events/<%= e.slug %>/ratings" rel="tooltip" title="evaluación" ><i class="icon-tasks"></i></a>
+                    <a href="/events/<%= e.slug %>/edit" rel="tooltip" title="editar" ><i class="icon-edit"></i></a><a href="javascript:alert('<%= e.short_url %>')" rel="tooltip" title="copiar link"><i class="icon-link"></i></a>
+                </td>
+            </tr>
+            <% end %>
+            <tr>
+                <td class="table-footer" colspan="3">Total de eventos: <%= @events.size %></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

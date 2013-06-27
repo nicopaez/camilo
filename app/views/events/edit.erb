@@ -1,0 +1,18 @@
+<div class="well">
+  <form class="centered" method="post" action='/events/<%= @event.id %>/update'>
+    <%= csrf_token_field %>
+    <h1>Detalles del evento</h1>
+    <input type="text" id="event[name]" name="event[name]" placeholder="nombre del evento" class="large" value="<%= @event.name %>"/>
+    <input type="text" id="event[date]" name="event[date]" placeholder="fecha:aaaa-mm-dd" value="<%= render_date(@event.date) %>" />
+    <input type="submit" class="btn big" id="saveButton" value="Guardar" />
+    <% if flash[:error] %>
+        <div class="alert alert-error">
+          <%=flash[:error]   %>
+        </div>
+    <% end %>
+    <br/>
+    <div class="">
+      <p>Link corto: <%= @event.short_url %> </p>
+    </div>
+  </form>
+</div>

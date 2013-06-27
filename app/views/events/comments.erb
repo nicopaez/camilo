@@ -1,0 +1,29 @@
+<div class="well">
+  <form class="centered">
+    <h1>Evaluación de evento</h1>
+    <p>Nombre: <%= @event.name %></p>
+    <p>Fecha: <%= @event.date.to_date.to_s %></p>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th class="qualification">Calificación</th>
+                <th>Comentario</th>
+            </tr>
+        </thead>    
+        <tbody>
+        <% @event.ratings.each do | rating |%>
+            <tr>
+                <td class="qualification"><%= render_rating_value(rating) %></td>
+                <td><%= rating.comment %></td>
+            </tr>
+        <% end %>
+            <tr>
+                <td class="table-footer" colspan="3">Total de evaluaciones: <%= @event.ratings.size %></td>
+            </tr>
+        </tbody>
+    </table>
+  </form>
+</div>
+
+    

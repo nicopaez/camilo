@@ -12,10 +12,15 @@ gem 'thin' # or mongrel
 
 # Project requirements
 gem 'rake'
+gem 'omniauth'
+gem 'omniauth-twitter', :github => 'arunagw/omniauth-twitter'
 
 # Component requirements
+gem 'googl'
 gem 'slim'
+gem 'haml'
 gem 'pg', :group => 'production'
+gem 'dm-mysql-adapter'
 gem 'dm-postgres-adapter', :group => 'production'
 gem 'dm-validations'
 gem 'dm-timestamps'
@@ -24,14 +29,19 @@ gem 'dm-constraints'
 gem 'dm-aggregates'
 gem 'dm-types'
 gem 'dm-core'
+gem 'dm-ar-finders'
 gem 'tilt', '1.3.7'
 
 # Test requirements
 gem 'dm-sqlite-adapter', :group => 'test' 
 gem 'rspec', :group => 'test'
+gem 'rspec_junit_formatter', :group => 'test'
 gem 'capybara', :group => 'test'
+gem 'selenium-webdriver', :group => 'test'
 gem 'cucumber', :group => 'test'
+gem 'simplecov', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
+gem 'debugger'
 
 # Padrino Stable Gem
 gem 'padrino', '0.11.1'

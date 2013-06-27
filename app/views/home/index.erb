@@ -1,3 +1,57 @@
-<div class="alert centered">
-Gracias por tu visita. Camilo está aún en construcción, <a href="mailto:camilo@nicopaez.com.ar">escríbenos</a> y te contactaremos en cuanto esté Camilo listo.
-</div>
+<!-- Masthead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+    <div>
+      <div class="well">
+        <h1>¿Voy bien, Camilo?</h1>
+        <p class="lead"></p><br/>
+          <span class="span3">
+            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Cienfuegos.jpg/220px-Cienfuegos.jpg">
+          </span>
+          <span class="span6">
+<br>
+
+             <p>Camilo es una aplicación web que permite recolectar feedback de una actuación, de manera simple para el expositor y de manera cómoda para la audiencia.</p>
+            <p>Si eres orador en un evento, simplemente entra a Camilo y sigue estos 3 simples pasos:</p>
+                <ol>
+                  <li>Crea tu evento con sólo indicar nombre y fecha, Camilo generará un link.</li>
+                  <li>Toma el link de tu evento y difúndelo entre los asistentes para que den feedback.</li>
+                  <li>Analiza en Camilo que tal te fué.</li>
+                </ol>
+<br/>
+  <p>
+Prúebalo.</p>
+            <div class="push-right">
+                <a href="/events/new"><button class="btn btn-primary big"> Crear evento</button></a>
+            </div>
+
+<br/>
+     
+            </span>
+        <div style="clear:both"></div>
+      </div>
+  </div>
+  <!--
+   <div class="subnav">
+     <ul class="nav nav-pills">
+       <li><a href="#typography">Typography</a></li>
+       <li><a href="#navbar">Navbar</a></li>
+       <li><a href="#buttons">Buttons</a></li>
+       <li><a href="#forms">Forms</a></li>
+       <li><a href="#tables">Tables</a></li>
+       <li><a href="#miscellaneous">Miscellaneous</a></li>
+     </ul>
+   </div>
+   -->
+</header>
+
+<br>
+
+
+<% content_for :additional_js do %>
+
+	<% if (PADRINO_ENV == 'production') %>
+		<%= javascript_include_tag 'google_analytics.js'%>
+	<% end %>
+
+<% end %>
