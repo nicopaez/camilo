@@ -30,6 +30,19 @@ td.centered-column {
     text-align: center;
 }
 
+th.qualification {
+    width: 200px;
+    text-align: center;
+}
+
+td.qualification {
+    text-align: center;
+}
+
+.table-centered-columns th, .table-centered-columns td {
+    text-align: center;
+}  
+
 th.centered-column {
     text-align: center;
 }

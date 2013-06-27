@@ -72,6 +72,15 @@ Camilo::App.controllers :events do
     end
   end
 
+  get '/:event_slug/comments' do
+    @event = Event.find_by_slug(params[:event_slug])   
+    if(@event.account == current_account) 
+      render 'events/comments'
+    else
+      return 403
+    end
+  end
+
   post '/:event_id/update' do
     @event = Event.get(params[:event_id].to_i)
     if @event && (@event.account == current_account)

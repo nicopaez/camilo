@@ -66,7 +66,7 @@ module Camilo
         provider :developer
       end
       set :login_page, "/login"    
-      ENV['APP_URL'] = 'http://127.0.0.1:3000/'
+      ENV['HOST_URL'] = 'http://127.0.0.1:3000/'
     end
     
     configure :staging, :production do

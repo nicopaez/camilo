@@ -4,7 +4,7 @@
     <p>Nombre: <%= @event.name %></p>
     <p>Fecha: <%= @event.date.to_date.to_s %></p>
 
-    <table class="table table-bordered table-striped table-hover">
+    <table class="table table-bordered table-striped table-hover table-centered-columns">
         <thead>
             <tr>
                 <th>Positivo</th>
@@ -15,7 +15,7 @@
         <tbody>
             <tr>
                 <td><%= @event.positive_ratings_count%></td>
-                <td><%= @event.neutral_ratings_count%></td>
+                <td ><%= @event.neutral_ratings_count%></td>
                 <td><%= @event.negative_ratings_count%></td>
             </tr>
             <tr>
@@ -24,6 +24,9 @@
         </tbody>
     </table>
   </form>
+  <div class="pull-right">
+    <a href="/events/<%= @event.slug %>/comments">ver comentarios</a>
+  </div>
 </div>
 
 <% content_for :additional_js do %>
