@@ -33,15 +33,20 @@ gem 'dm-ar-finders'
 gem 'tilt', '1.3.7'
 
 # Test requirements
-gem 'dm-sqlite-adapter', :group => 'test' 
-gem 'rspec', :group => 'test'
-gem 'rspec_junit_formatter', :group => 'test'
-gem 'capybara', :group => 'test'
-gem 'selenium-webdriver', :group => 'test'
-gem 'cucumber', :group => 'test'
-gem 'simplecov', :group => 'test'
-gem 'rack-test', :require => 'rack/test', :group => 'test'
-gem 'debugger'
+group :test do
+	gem 'dm-sqlite-adapter'
+	gem 'rspec'
+	gem 'rspec_junit_formatter'
+	gem 'capybara'
+	gem 'selenium-webdriver'
+	gem 'cucumber'
+	gem 'simplecov'
+	gem 'rack-test', :require => 'rack/test'
+end
+
+group :development do
+	gem 'debugger'
+end
 
 # Padrino Stable Gem
 gem 'padrino', '0.11.1'
