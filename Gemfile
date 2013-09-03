@@ -16,11 +16,11 @@ gem 'omniauth'
 gem 'omniauth-twitter', :github => 'arunagw/omniauth-twitter'
 
 # Component requirements
+gem 'erubis', '~> 2.7.0'
 gem 'googl'
 gem 'slim'
 gem 'haml'
 gem 'pg', :group => 'production'
-gem 'dm-mysql-adapter'
 gem 'dm-postgres-adapter', :group => 'production'
 gem 'dm-validations'
 gem 'dm-timestamps'

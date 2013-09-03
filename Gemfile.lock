@@ -52,9 +52,6 @@ GEM
       dm-core (~> 1.2.0)
     dm-migrations (1.2.0)
       dm-core (~> 1.2.0)
-    dm-mysql-adapter (1.2.0)
-      dm-do-adapter (~> 1.2.0)
-      do_mysql (~> 0.10.6)
     dm-postgres-adapter (1.2.0)
       dm-do-adapter (~> 1.2.0)
       do_postgres (~> 0.10.6)
@@ -73,12 +70,11 @@ GEM
       uuidtools (~> 2.1)
     dm-validations (1.2.0)
       dm-core (~> 1.2.0)
-    do_mysql (0.10.12)
-      data_objects (= 0.10.12)
     do_postgres (0.10.12)
       data_objects (= 0.10.12)
     do_sqlite3 (0.10.12)
       data_objects (= 0.10.12)
+    erubis (2.7.0)
     eventmachine (1.0.0)
     fastercsv (1.5.5)
     ffi (1.8.1)
@@ -208,12 +204,12 @@ DEPENDENCIES
   dm-constraints
   dm-core
   dm-migrations
-  dm-mysql-adapter
   dm-postgres-adapter
   dm-sqlite-adapter
   dm-timestamps
   dm-types
   dm-validations
+  erubis (~> 2.7.0)
   googl
   haml
   omniauth

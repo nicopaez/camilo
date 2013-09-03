@@ -47,7 +47,7 @@
             <li><a rel="tooltip" href="/" title="Profile"><%= current_account.friendly_name %></a></li>
             <li><a rel="tooltip" href="/logout" title="Cerrar sesión">Cerrar sesión</a></li>
           <% else %>
-            <li><a rel="tooltip" href="/login" title="Iniciar sesión">Iniciar sesión</a></li>
+            <li><a rel="tooltip" href="<%= login_url %>" title="Iniciar sesión">Iniciar sesión</a></li>
           <% end %>
         </ul>
       </div>

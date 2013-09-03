@@ -23,4 +23,8 @@ Camilo::App.helpers do
     return ":-|" if rating.value == 0
     return ":-("
   end
+
+  def login_url
+    Padrino.env == :development ? '/login' : '/auth/twitter'
+  end
 end
