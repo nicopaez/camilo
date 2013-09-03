@@ -76,7 +76,7 @@ GEM
       data_objects (= 0.10.12)
     eventmachine (1.0.0)
     fastercsv (1.5.5)
-    ffi (1.8.1)
+    ffi (1.9.0)
     gherkin (2.12.0)
       multi_json (~> 1.3)
     googl (0.6.3)
@@ -98,7 +98,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
-    multi_json (1.7.3)
+    multi_json (1.7.9)
     multi_xml (0.5.4)
     nokogiri (1.5.9)
     oauth (0.4.7)
@@ -157,10 +157,10 @@ GEM
       builder
       rspec (~> 2.0)
     rubyzip (0.9.9)
-    selenium-webdriver (2.32.1)
+    selenium-webdriver (2.35.1)
       childprocess (>= 0.2.5)
       multi_json (~> 1.0)
-      rubyzip
+      rubyzip (< 1.0.0)
       websocket (~> 1.0.4)
     simplecov (0.6.4)
       multi_json (~> 1.0)
@@ -218,7 +218,7 @@ DEPENDENCIES
   rake
   rspec
   rspec_junit_formatter
-  selenium-webdriver
+  selenium-webdriver (~> 2.35.0)
   simplecov
   slim
   thin

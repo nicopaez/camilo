@@ -19,7 +19,6 @@ if ['development', 'test', 'travis'].include?(PADRINO_ENV)
   end
 
 	Cucumber::Rake::Task.new(:cucumber) do |task|
-  	Rake::Task['db:migrate'].invoke
   	task.cucumber_opts = ["features"]
 	end
 

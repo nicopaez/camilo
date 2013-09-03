@@ -37,7 +37,7 @@ group :test do
 	gem 'rspec'
 	gem 'rspec_junit_formatter'
 	gem 'capybara'
-	gem 'selenium-webdriver'
+	gem "selenium-webdriver", "~> 2.35.0"
 	gem 'cucumber'
 	gem 'simplecov'
 	gem 'rack-test', :require => 'rack/test'
