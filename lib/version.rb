@@ -4,7 +4,7 @@ class Version
 	MINOR = 0
 
 	def self.current
-		"beta version | #{MAYOR}.#{MINOR}.#{ENV['BUILD_NUMBER']}"
+		"#{MAYOR}.#{MINOR}.#{ENV['BUILD_NUMBER']}"
 	end
 	
 end
