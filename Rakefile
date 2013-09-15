@@ -13,7 +13,6 @@ PadrinoTasks.use(:datamapper)
 PadrinoTasks.init
 
 if ['development', 'test', 'travis'].include?(PADRINO_ENV)
-	require 'cucumber/rake/task'
 
 	task :travis do
   ["rake spec", "rake cucumber"].each do |cmd|
@@ -23,9 +22,11 @@ if ['development', 'test', 'travis'].include?(PADRINO_ENV)
     end
   end
 
-	Cucumber::Rake::Task.new(:cucumber) do |task|
-  	task.cucumber_opts = ["features"]
-	end
+
+  require 'cucumber/rake/task'
+  Cucumber::Rake::Task.new(:cucumber) do |task|
+    task.cucumber_opts = ["features"]
+  end
 
   require 'rspec/core/rake_task'
   RSpec::Core::RakeTask.new(:spec) do |t|
@@ -47,5 +48,5 @@ if ['development', 'test', 'travis'].include?(PADRINO_ENV)
     task.fail_on_error = false
   end
 
-	task :default => [:travis]
+  task :default => [:travis]
 end
