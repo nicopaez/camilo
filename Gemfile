@@ -41,6 +41,7 @@ group :test do
 	gem 'cucumber'
 	gem 'simplecov'
 	gem 'rack-test', :require => 'rack/test'
+  gem 'rubocop',  :github => 'bbatsov/rubocop'
 end
 
 group :development do
