@@ -114,17 +114,6 @@ Then /^(?:|I )should see "([^\"]*)"(?: within "([^\"]*)")?$/ do |text, selector|
   end
 end
 
-Then /^(?:|I )should see \/([^\/]*)\/(?: within "([^\"]*)")?$/ do |regexp, selector|
-  regexp = Regexp.new(regexp)
-  with_scope(selector) do
-    if page.respond_to? :should
-      page.should have_xpath('//*', :text => regexp)
-    else
-      assert page.has_xpath?('//*', :text => regexp)
-    end
-  end
-end
-
 Then /^(?:|I )should not see "([^\"]*)"(?: within "([^\"]*)")?$/ do |text, selector|
   with_scope(selector) do
     if page.respond_to? :should
@@ -154,18 +143,6 @@ Then /^the "([^\"]*)" field(?: within "([^\"]*)")? should contain "([^\"]*)"$/ d
       field_value.should =~ /#{value}/
     else
       assert_match(/#{value}/, field_value)
-    end
-  end
-end
-
-Then /^the "([^\"]*)" field(?: within "([^\"]*)")? should not contain "([^\"]*)"$/ do |field, selector, value|
-  with_scope(selector) do
-    field = find_field(field)
-    field_value = (field.tag_name == 'textarea') ? field.text : field.value
-    if field_value.respond_to? :should_not
-      field_value.should_not =~ /#{value}/
-    else
-      assert_no_match(/#{value}/, field_value)
     end
   end
 end
