@@ -1,15 +1,26 @@
+
+<% content_for :additional_css do %>
+<%= stylesheet_link_tag 'datepicker.css' %>
+<% end %>
+
 <div class="well">
   <form class="centered" method="post" action='/events/create'>
     <%= csrf_token_field %>
     <h1>Detalles del evento</h1>
     <input type="text" id="event[name]" name="event[name]" placeholder="nombre del evento" class="large" value="<%= @event.name %>"/>
-    <input type="text" id="event[date]" name="event[date]" placeholder="fecha:aaaa-mm-dd" value="<%= render_date(@event.date) %>" />
+    <input type="text" id="event_date" name="event[date]" placeholder="fecha:aaaa-mm-dd" value="<%= render_date(@event.date) %>" />
+    <a href="#" id="event_date_button" class="add-on"><i class="icon-calendar"></i></a>
     <input type="submit" class="btn big" id="saveButton" value="Guardar" />
     <% if flash[:error] %>
         <div class="alert alert-error">
           <%=flash[:error]   %>
         </div>
     <% end %>
-
   </form>
 </div>
+
+<% content_for :additional_js do %>
+  <%= javascript_include_tag 'bootstrap-datepicker.js' %>  
+  <%= javascript_include_tag 'event_form.js' %>
+<% end %>
+
