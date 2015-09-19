@@ -1,5 +1,6 @@
 language: ruby
 version: 2.1.5
+sudo: false
 before_script: 
   - mysql -e 'create database camilo_test;'
   - "sh -e /etc/init.d/xvfb start"
