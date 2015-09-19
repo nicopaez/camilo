@@ -15,7 +15,7 @@ describe Event do
     end
 
     it 'should assign unique slug' do
-      Event.should_receive(:all).with(:slug => 'myevent1').and_return([mock()])
+      Event.should_receive(:all).with(:slug => 'myevent1').and_return([double()])
       Event.should_receive(:all).with(:slug => 'myevent2').and_return([])
       event1 = Event.new
       event1.name ='my event'
