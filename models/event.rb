@@ -31,6 +31,7 @@ class Event
 
   def set_slug
     self.slug = Event.generate_slug(@name) if self.new?
+    #self.short_url = UrlShortener.for_default_url.shorten("events/rate/#{@event.slug}").short_url
   end
   
   def slug

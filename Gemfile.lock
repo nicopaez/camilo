@@ -33,7 +33,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    childprocess (0.3.9)
+    childprocess (0.5.6)
       ffi (~> 1.0, >= 1.0.11)
     columnize (0.3.6)
     cucumber (1.3.1)
@@ -89,11 +89,11 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.0)
     fastercsv (1.5.5)
-    ffi (1.9.0)
+    ffi (1.9.10)
     gherkin (2.12.0)
       multi_json (~> 1.3)
-    googl (0.6.3)
-      httparty (~> 0.10.0)
+    googl (0.7.1)
+      httparty (~> 0.10)
       json (>= 1.4.6)
     haml (4.0.2)
       tilt
@@ -101,18 +101,18 @@ GEM
     http_router (0.11.0)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
-    httparty (0.10.2)
-      multi_json (~> 1.0)
+    httparty (0.13.5)
+      json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.4)
-    json (1.7.7)
+    json (1.8.3)
     mail (2.5.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
-    multi_json (1.7.9)
-    multi_xml (0.5.4)
+    multi_json (1.11.2)
+    multi_xml (0.5.5)
     nokogiri (1.5.9)
     oauth (0.4.7)
     omniauth (1.1.0)
@@ -174,12 +174,12 @@ GEM
     rspec_junit_formatter (0.1.1)
       builder
       rspec (~> 2.0)
-    rubyzip (0.9.9)
-    selenium-webdriver (2.35.1)
-      childprocess (>= 0.2.5)
+    rubyzip (1.1.7)
+    selenium-webdriver (2.47.1)
+      childprocess (~> 0.5)
       multi_json (~> 1.0)
-      rubyzip (< 1.0.0)
-      websocket (~> 1.0.4)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
     simplecov (0.6.4)
       multi_json (~> 1.0)
       simplecov-html (~> 0.5.3)
@@ -206,7 +206,7 @@ GEM
     url_mount (0.2.1)
       rack
     uuidtools (2.1.4)
-    websocket (1.0.7)
+    websocket (1.2.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -239,8 +239,11 @@ DEPENDENCIES
   rspec
   rspec_junit_formatter
   rubocop!
-  selenium-webdriver (~> 2.35.0)
+  selenium-webdriver (~> 2.47.1)
   simplecov
   slim
   thin
   tilt (= 1.3.7)
+
+BUNDLED WITH
+   1.10.6

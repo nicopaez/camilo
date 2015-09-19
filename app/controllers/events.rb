@@ -24,8 +24,6 @@ Camilo::App.controllers :events do
     @event = Event.new(params[:event])
     @event.account = current_account
     if @event.save
-      @event.short_url = UrlShortener.for_default_url.shorten("events/rate/#{@event.slug}").short_url
-      @event.save
       redirect(url(:events, :show, :id => @event.id))
     else
       flash.now[:error] = "Error: ambos campos son requeridos"

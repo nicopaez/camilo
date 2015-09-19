@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#ruby '2.2.3'
+
 # Distribute your app as a gem
 # gemspec
 
@@ -35,7 +37,7 @@ group :test do
   gem 'rspec'
   gem 'rspec_junit_formatter'
   gem 'capybara'
-  gem "selenium-webdriver", "~> 2.35.0"
+  gem "selenium-webdriver", "~> 2.47.1"
   gem 'cucumber'
   gem 'simplecov'
   gem 'rack-test', :require => 'rack/test'
