@@ -12,7 +12,7 @@ PadrinoTasks.use(:database)
 PadrinoTasks.use(:datamapper)
 PadrinoTasks.init
 
-if ['development', 'test', 'travis'].include?(PADRINO_ENV)
+if ['development', 'test', 'ci'].include?(PADRINO_ENV)
 
 	task :all do
   ["rake spec", "rake cucumber"].each do |cmd|

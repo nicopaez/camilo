@@ -1,7 +1,7 @@
 language: ruby
-version: 1.9.3
+version: 2.1.5
 before_script: 
   - mysql -e 'create database camilo_test;'
   - "sh -e /etc/init.d/xvfb start"
-script: PADRINO_ENV=travis padrino rake
+script: PADRINO_ENV=ci padrino rake
 bundler_args: --without development production
